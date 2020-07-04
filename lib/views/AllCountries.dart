@@ -126,12 +126,15 @@ class ListCountries extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Country(countries[index]),
-                ),
-              );
+              Navigator.pushNamed(context, Country.routeName,
+                  arguments: countries[index]);
+
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => Country(countries[index]),
+              //   ),
+              // );
             },
             child: Card(
               elevation: 10,
