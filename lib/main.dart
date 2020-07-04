@@ -11,6 +11,7 @@ class AllCountries extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.pink,
         title: Text('Countries App'),
       ),
     );
